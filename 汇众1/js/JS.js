@@ -92,24 +92,60 @@ $('#top_right').click(function(){
 		$(".one_img_1 ul").append(firPos);
 	})
 	//最下方按键切换
-	$('.anniu1').click(function(){
-		$(".bottom_ul li:first").stop().animate({marginLeft:"-193px"},"slow",function(){
-			$(".bottom_ul").append($(".bottom_ul li:first"));
-			$(".bottom_ul li:last").css({marginLeft:"0px"});
+//	$('.anniu1').click(function(){
+//		$(".bottom_ul li:first").stop().animate({marginLeft:"-193px"},"20",function(){
+//			$(".bottom_ul").append($(".bottom_ul li:first"));
+//			$(".bottom_ul li:last").css({marginLeft:"0px"});
+//		})
+//	});
+//	$('.anniu2').click(function(){
+//		$(".bottom_ul").prepend($(".bottom_ul li:last"));
+//		$(".bottom_ul li:last").css({marginLeft:"-1624px"});
+//		$(".bottom_ul li:first").stop().animate({marginLeft:"193px"},"slow",function(){
+//			$(".bottom_ul li:first").css({marginLeft:"10px"});
+//			$(".bottom_ul li:last").css({marginLeft:"5px"});
+//		})
+//	})
+var dianji={
+	Li:$(".bottom_ul li"),
+	Ul:$(".bottom_ul"),
+	Anniu:$(".anniu1"),
+	Anniu2:$(".anniu2"),
+	yidong:function(){
+		var that=this;
+		var Liwidth=that.Li.innerWidth();
+		
+		
+		that.Anniu.stop().click(function(){
+//			that.Li.stop();
+			var mowei=$(".bottom_ul li:first");
+				mowei.animate({marginLeft:-Liwidth-10},200,function(){
+				that.Ul.append($(".bottom_ul li:first"));
+		});
+		that.Li.removeAttr("style");
+		});
+		
+		that.Anniu2.stop().click(function(){
+			var kaitou=$(".bottom_ul li:last");
+			that.Ul.prepend($(".bottom_ul li:last").css({marginLeft:-Liwidth-10}));
+			kaitou.animate({marginLeft:0},200
+			)
+			that.Li.removeAttr("style");
 		})
-	});
-	$('.anniu2').click(function(){
-		$(".bottom_ul").prepend($(".bottom_ul li:last"));
-		$(".bottom_ul li:last").css({marginLeft:"-1624px"});
-		$(".bottom_ul li:first").stop().animate({marginLeft:"193px"},"slow",function(){
-			$(".bottom_ul li:first").css({marginLeft:"10px"});
-			$(".bottom_ul li:last").css({marginLeft:"5px"});
-		})
-	})
+	},
+	init:function(){
+		var that=this;
+		that.yidong();
+	}
+}
+dianji.init();
+	
+	
 	//点击到最上
 	$(".bottom_1_2").click(function(){
 	$("body,html").animate({scrollTop:0},100);//向上距离0，200毫秒结束
 })
+	
 $(window).scroll(function(){
 	var scrollTop=$('html').scrollTop()+$('body').scrollTop();//得到网页的时时滚动位置
 	var winHeight=$(window).height();//网页的可视高度
@@ -128,5 +164,5 @@ var time=setInterval(function(){
 		$('#top_right').click();
 	},3000);
 
-
+	
 

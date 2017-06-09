@@ -147,10 +147,7 @@ i {
   float: left;
   width: 180px;
 }
-#top {
-  width: 100%;
-  height: auto;
-}
+
 .top-img {
   width: 100%;
   margin: 0 auto;
@@ -178,6 +175,7 @@ i {
   padding-left: 24px;
   margin-right: 23px;
 }
+.current a{color: #0771ba;}
 .top-wenben ul li a {
   display: block;
   width: 82px;
@@ -186,17 +184,12 @@ i {
   text-align: center;
   color: #222222;
 }
-.top-wenben ul li:hover {
-  background: url(../images/li-bg.png) no-repeat;
-}
-.top-wenben ul a:hover {
-  color: #0771ba;
-}
+.current{background: url(../images/li-bg.png)no-repeat;}
 .Middle {
   width: 1000px;
-  height: 650px;
+  height: auto;
   margin: 0 auto;
-  padding: 63px 0  0 1px;
+  padding: 63px 0  60px 1px;
   overflow: hidden;
 }
 .Middle ul {

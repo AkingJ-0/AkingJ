@@ -4,6 +4,70 @@
 	<meta charset="UTF-8" />
 	<title>产品</title>
 	<link rel="stylesheet" type="text/css" href="css/chanping.css"/>
+	<style>
+			/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}		
+	</style>
 </head>
 <body>
 	<section class="hader"id="top">
@@ -113,29 +177,31 @@
 		<div class="top-img">
 			<img src="images/top-bg-1.png"/>
 		</div>
-		<div class="top-wenben">
-			<ul>
-				<li><a href="##">所有产品</a></li>
-				<li><a href="##">企业级应用</a></li>
-				<li><a href="##">个人应用</a></li>
-				<li><a href="##">后台增加</a></li>
+		
+	</section>
+	<div class="top-wenben">
+			<ul class="top-wenben-1">
+				<li class="current" data="*"><a href="##">所有产品</a></li>
+				<li data=".bg1"><a href="##">企业级应用</a></li>
+				<li data=".bg2"><a href="##">个人应用</a></li>
+				<li data=".bg3"><a href="##">后台增加</a></li>
+				<li data=".bg4"><a href="##">前台增加</a></li>
 			</ul>
 		</div>
-	</section>
 	<section class="Middle">
-		<ul>
-			<li><a href="neiye.html"><img src="images/four-1.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
-			<li><a href="neiye.html"><img src="images/four-2.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
-			<li><a href="neiye.html"><img src="images/four-3.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
-			<li><a href="neiye.html"><img src="images/four-4.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
-			<li><a href="neiye.html"><img src="images/four-4.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
-			<li><a href="neiye.html"><img src="images/four-3.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
-			<li><a href="neiye.html"><img src="images/four-2.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
-			<li><a href="neiye.html"><img src="images/four-1.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
-			<li><a href="neiye.html"><img src="images/four-2.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
-			<li><a href="neiye.html"><img src="images/four-4.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
-			<li><a href="neiye.html"><img src="images/four-1.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
-			<li><a href="neiye.html"><img src="images/four-3.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+		<ul class="tupian">
+			<li class="bg1"><a href="neiye.html"><img src="images/four-1.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+			<li class="bg2"><a href="neiye.html"><img src="images/four-2.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+			<li class="bg3"><a href="neiye.html"><img src="images/four-3.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+			<li class="bg4"><a href="neiye.html"><img src="images/four-4.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+			<li class="bg4"><a href="neiye.html"><img src="images/four-4.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+			<li class="bg3"><a href="neiye.html"><img src="images/four-3.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+			<li class="bg2"><a href="neiye.html"><img src="images/four-2.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+			<li class="bg1"><a href="neiye.html"><img src="images/four-1.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+			<li class="bg2"><a href="neiye.html"><img src="images/four-2.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+			<li class="bg4"><a href="neiye.html"><img src="images/four-4.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+			<li class="bg1"><a href="neiye.html"><img src="images/four-1.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
+			<li class="bg3"><a href="neiye.html"><img src="images/four-3.png"/><i><img src="images/dian.png"/>产品名称实例</i></a></li>
 		</ul>
 	</section>
 	
@@ -193,7 +259,27 @@
 		<li><a href="http://weibo.com/?sudaref=www.baidu.com&retcode=6102"><img src="images/guding-3.png"/></a></li>
 		<i><a href="#top"><img src="images/guding-4.png"/></a></i>
 	</ul>
+	
+	
+	
+	
 	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" language="javascript" src="js/jquery.isotope.min.js"></script>
 	<script src="js/chanping.js"></script>
+	<script>
+$('.tupian').isotope({
+	itemSelector: '.tupian li'
+});
+
+$('.top-wenben-1 li').click(function(){
+	$(this).addClass('current').siblings('li').removeClass('current');
+	var dataValue=$(this).attr('data');
+	$('.tupian').isotope({
+		itemSelector: '.tupian li',
+		filter:dataValue
+	});
+});
+</script>
 </body>
 </html>
